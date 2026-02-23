@@ -13,6 +13,8 @@ Current is calculated by Ohm's Law using the measured voltage drop across the cu
 ## Data collection
 Using the script `src/monitor_adc.py` on the Raspberry Pi 4, the current sense voltage and load voltage are measured continuously while the current drive is manually increased on the DC power supply. The results are saved to a CSV file. In this example, this experiment is repeated for multiple 10-Ohm resistors.
 
+I2C must be enabled on the Raspberry Pi in order for this script to work. 
+
 ## Post-processing
 Once voltage and current are measured for multiple resistors, a separate script `src/plot_resistor_data.ipynb` is used to post-process and plot the data from multiple CSV files. Post-processing includes the following steps:
 
